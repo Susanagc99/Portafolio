@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Susana Gutiérrez | Full-Stack Developer",
-  description: "Full-Stack Developer passionate about creating digital experiences",
+  description: "Full-Stack Developer in progress, passionate about creating digital experiences",
 };
 
 export default function RootLayout({
@@ -17,18 +17,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={inter.className}>
+      <body>
         {/* Header aparece en todas las páginas */}
         <Header />
         
         {/* Contenido de cada página */}
-        <main className="min-h-screen">
+        <main>
           {children}
         </main>
         
         {/* Footer opcional */}
-        <footer className="bg-gray-900 text-white py-6 text-center">
-          <p className="text-sm">© 2025 Susana Gutiérrez Callejas. Todos los derechos reservados.</p>
+        <footer>
+          <p>© 2025 Susana Gutiérrez Callejas. All rights reserved.</p>
         </footer>
       </body>
     </html>

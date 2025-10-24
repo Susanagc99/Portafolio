@@ -1,30 +1,29 @@
 import Link from 'next/link';
-import styles from '@/app/Header.module.css';
 
 export default function Header() {
     return (
-        <header className={styles.header}>
-            <nav className={styles.nav}>
-                <div className={styles.navContent}>
+        <header>
+            <nav>
+                <div>
                     {/* Logo/Name */}
-                    <Link href="/" className={styles.logo}>
-                        Susana GC
+                    <Link href="/">
+                        Portfolio | Susana Gutiérrez Callejas
                     </Link>
 
                     {/* Navigation Links */}
-                    <ul className={styles.navLinks}>
+                    <ul>
                         <li>
-                            <Link href="/" className={styles.navLink}>
+                            <Link href="/">
                                 Home
                             </Link>
                         </li>
                         <li>
-                            <Link href="/projects" className={styles.navLink}>
+                            <Link href="/projects">
                                 Projects
                             </Link>
                         </li>
                         <li>
-                            <Link href="/contact" className={styles.navLink}>
+                            <Link href="/contact">
                                 Contact
                             </Link>
                         </li>
