@@ -1,0 +1,378 @@
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    animation: slide-up 0.8s ease;
+    min-height: calc(100vh - 140px);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.leftColumn,
+.rightColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==========================================
+    HEADER SECTION
+     ========================================== */
+.header {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+/* Efecto glow detrás del header */
+.header::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(236, 72, 153, 0.2) 0%, transparent 70%);
+    animation: glow 6s ease-in-out infinite;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.title {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 900;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #a855f7 0%, #ec4899 50%, #f97316 100%);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-shift 8s ease infinite;
+    position: relative;
+    z-index: 1;
+    text-align: left;
+}
+
+.subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    color: white;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+    position: relative;
+    z-index: 1;
+    text-align: left;
+}
+
+.highlight {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-weight: 600;
+    background: linear-gradient(135deg, #ec4899 0%, #f97316 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    z-index: 1;
+}
+
+/* ==========================================
+    FORM WRAPPER
+     ========================================== */
+     .formWrapper {
+        background: rgba(26, 11, 46, 0.4);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(139, 92, 246, 0.2);
+        border-radius: 30px;
+        padding: 3rem;
+        position: relative;
+        overflow: hidden;
+        box-shadow:
+            0 20px 60px rgba(139, 92, 246, 0.2),
+            0 0 100px rgba(236, 72, 153, 0.1);
+        transition: all 0.4s ease;
+    }
+
+/* Efecto decorativo flotante */
+.formWrapper::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -30%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+    animation: float 10s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.formWrapper::after {
+    content: '';
+    position: absolute;
+    bottom: -50%;
+    left: -30%;
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(236, 72, 153, 0.15) 0%, transparent 70%);
+    animation: float 12s ease-in-out infinite;
+    animation-delay: 2s;
+    pointer-events: none;
+}
+
+.formWrapper:hover {
+    border-color: rgba(139, 92, 246, 0.4);
+    box-shadow:
+        0 25px 70px rgba(139, 92, 246, 0.25),
+        0 0 120px rgba(236, 72, 153, 0.15);
+}
+
+/* ==========================================
+    FORM CONTENT
+     ========================================== */
+.formContent {
+    position: relative;
+    z-index: 1;
+}
+
+/* ==========================================
+    RIGHT COLUMN - ILLUSTRATION
+     ========================================== */
+.illustrationWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.envelopeIllustration {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.envelope {
+    top: 120px;
+    width: 180px;
+    height: 140px;
+    background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+    border-radius: 8px;
+    position: relative;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
+}
+
+.document {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140px;
+    height: 180px;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.textLines {
+    padding: 2rem 1rem 0.5rem;
+}
+
+.textLines div {
+    height: 8px;
+    background: linear-gradient(135deg, #8b5cf6, #ec4899);
+    margin-bottom: 8px;
+    border-radius: 4px;
+}
+
+.textLines div:nth-child(1) {
+    width: 100%;
+}
+
+.textLines div:nth-child(2) {
+    width: 80%;
+}
+
+.textLines div:nth-child(3) {
+    width: 60%;
+}
+
+.bellIcon,
+.bubbleIcon,
+.planeIcon {
+    position: absolute;
+    font-size: 2rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+.bellIcon {
+    top: 120px;
+    right:40px;
+    animation-delay: 0s;
+}
+
+.bubbleIcon {
+    top: 180px;
+    left: -30px;
+    animation-delay: 1s;
+}
+
+.planeIcon {
+    top: 220px;
+    right: -20px;
+    animation-delay: 2s;
+}
+
+.stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.star1,
+.star2,
+.star3 {
+    position: absolute;
+    font-size: 1.5rem;
+    animation: twinkle 2s ease-in-out infinite;
+}
+
+.star1 {
+    top: 160px;
+    left: 10px;
+    animation-delay: 0s;
+}
+
+.star2 {
+    top: 180px;
+    right: 30px;
+    animation-delay: 0.7s;
+}
+
+.star3 {
+    bottom: -100px;
+    left: 80px;
+    animation-delay: 1.4s;
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+/* ==========================================
+    SOCIAL LINKS
+     ========================================== */
+.socialLinks {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.socialIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(26, 11, 46, 0.6);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(139, 92, 246, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.socialIcon:hover {
+    transform: translateY(-5px);
+    border-color: rgba(139, 92, 246, 0.6);
+    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4);
+}
+
+.socialIcon svg {
+    color: white;
+}
+
+.socialIcon:hover svg {
+    animation: bounce 0.6s ease;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* ==========================================
+    RESPONSIVE
+     ========================================== */
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .illustrationWrapper {
+        order: -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 2rem 1.5rem;
+    }
+
+    .header {
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .header::before {
+        width: 350px;
+        height: 350px;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .subtitle {
+        text-align: center;
+    }
+
+    .formWrapper {
+        padding: 2rem;
+    }
+
+    .illustrationWrapper {
+        min-height: 300px;
+    }
+
+    .envelopeIllustration {
+        width: 250px;
+        height: 250px;
+    }
+
+    .socialLinks {
+        gap: 1.5rem;
+    }
+
+    .socialIcon {
+        width: 50px;
+        height: 50px;
+    }
+}

@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { Input, Textarea, Button, Alert } from '@heroui/react';
-import { CheckCircleIcon, XCircleIcon } from "'@heroicons/react/24/outline";
+import { CheckCircleIcon, XCircleIcon } from '@heroicons/react/24/outline';
 
 // ==========================================
 // STEP 1: Define validation schema with Yup
@@ -112,7 +112,8 @@ export default function ContactForm() {
     // ==========================================
 
     return (
-        <div className="flex flex-col gap-4 w-full max-w-md mx-auto">
+        
+        <div className="flex flex-col gap-4 w-full">
             <form
                 onSubmit={handleSubmit(onSubmit)}
                 className="flex flex-col gap-4 w-full"
@@ -120,7 +121,7 @@ export default function ContactForm() {
                 {/* Field: Full Name */}
                 <Input
                     label="Full Name"
-                    placeholder="Ex: Jane Doe"
+                    placeholder="Ex: David Henao"
                     {...register('fullName')}
                     isInvalid={!!errors.fullName}
                     errorMessage={errors.fullName?.message}
@@ -129,7 +130,7 @@ export default function ContactForm() {
                 {/* Field: Email */}
                 <Input
                     label="Email"
-                    placeholder="Ex: jane@example.com"
+                    placeholder="Ex: david@example.com"
                     type="email"
                     {...register('email')}
                     isInvalid={!!errors.email}
