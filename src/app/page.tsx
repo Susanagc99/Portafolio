@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -37,62 +36,32 @@ export default function Home() {
         <h2>Technologies & Tools</h2>
         <div className="">
           <p>
-            <Image
-              src="https://skillicons.dev/icons?i=py"
-              alt="python logo"
-              width={32}
-              height={32}
-            />
+            <img src="https://skillicons.dev/icons?i=py" alt="python logo" width={32} height={32} />
             Python
           </p>
 
           <p>
-            <Image
-              src="https://skillicons.dev/icons?i=css"
-              alt="css3 logo"
-              width={32}
-              height={32}
-            />
+            <img src="https://skillicons.dev/icons?i=css" alt="css3 logo" width={32} height={32} />
             CSS
           </p>
 
           <p>
-            <Image
-              src="https://skillicons.dev/icons?i=html"
-              alt="html5 logo"
-              width={32}
-              height={32}
-            />
+            <img src="https://skillicons.dev/icons?i=html" alt="html5 logo" width={32} height={32} />
             HTML
           </p>
 
           <p>
-            <Image
-              src="https://skillicons.dev/icons?i=js"
-              alt="javascript logo"
-              width={32}
-              height={32}
-            />
+            <img src="https://skillicons.dev/icons?i=js" alt="javascript logo" width={32} height={32} />
             JavaScript
           </p>
 
           <p>
-            <Image
-              src="https://skillicons.dev/icons?i=mysql"
-              alt="mysql logo"
-              width={32}
-              height={32}
-            />
+            <img src="https://skillicons.dev/icons?i=mysql" alt="mysql logo" width={32} height={32} />
             MySQL
           </p>
 
           <p>
-            <Image
-              src="https://skillicons.dev/icons?i=ts"
-              alt="typescript logo"
-              width={32}
-              height={32}
-            />
+            <img src="https://skillicons.dev/icons?i=ts" alt="typescript logo" width={32} height={32} />
             TypeScript
           </p>
         </div>
