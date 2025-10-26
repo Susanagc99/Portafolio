@@ -1,7 +1,9 @@
+
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import { HeroUIProvider } from "@heroui/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,18 +20,21 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body>
-        {/* Header aparece en todas las páginas */}
-        <Header />
-        
-        {/* Contenido de cada página */}
-        <main>
-          {children}
-        </main>
-        
-        {/* Footer opcional */}
-        <footer>
-          <p>© 2025 Susana Gutiérrez Callejas. All rights reserved.</p>
-        </footer>
+        {/* HeroUI Provider: Necesario para usar los componentes de HeroUI */}
+        <HeroUIProvider>
+          {/* Header aparece en todas las páginas */}
+          <Header />
+          
+          {/* Contenido de cada página */}
+          <main>
+            {children}
+          </main>
+          
+          {/* Footer opcional */}
+          <footer>
+            <p>© 2025 Susana Gutiérrez Callejas. All rights reserved.</p>
+          </footer>
+        </HeroUIProvider>
       </body>
     </html>
   );

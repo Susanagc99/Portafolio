@@ -1,72 +1,102 @@
-
+import Link from 'next/link'
+import Image from "next/image";
 
 export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section>
-        <p>
-          <span>👋</span> Hi, my name is
-        </p>
+      <section className="mt-8">
         <h1>
-          <span>Susana</span>
+          Hi, my name is Susana
         </h1>
-        <p> 
+        <p>
           a Full-stack developer in progress | Building digital experiences with passion
         </p>
         <div>
-          <a href="/projects">
+          <Link href="/projects">
             View Projects
-          </a>
-          <a href="/contact">
+          </Link>
+          <Link href="/contact">
             Contact Me
-          </a>
+          </Link>
         </div>
       </section>
 
       {/* About Section */}
       <section>
-        <h2>About Me</h2>
+        <h2 className="mt-8">About Me</h2>
         <p>
-          I am passionate about technology, music, and exploring how ideas can turn into real projects. Currently I learning TypeScript and Next.js while building projects that blend logic, design, and creativity.<br /><br />
-          I believe in the power of patience, curiosity, and consistency to grow in the tech world<br /><br />
+          I am a creative mind passionate about technology, music, and turning ideas into meaningful projects.
+          I am currently learning TypeScript and Next.js, exploring how logic and design can come together to build something beautiful and functional.
+          I believe that patience, curiosity, and consistency are the keys to growing in the tech world and I try to keep them present in everything I do.
         </p>
       </section>
 
       {/* Skills Section */}
-      <section>
+      <section className="mt-8 mb-8">
         <h2>Technologies & Tools</h2>
-        <div className="flex-col">
+        <div className="">
           <p>
-          <img src="https://skillicons.dev/icons?i=py" height="32" alt="python logo"></img>
-          Python
+            <Image
+              src="https://skillicons.dev/icons?i=py"
+              alt="python logo"
+              width={32}
+              height={32}
+            />
+            Python
           </p>
 
           <p>
-          <img src="https://skillicons.dev/icons?i=css" height="32" alt="css3 logo" />
-          CSS
+            <Image
+              src="https://skillicons.dev/icons?i=css"
+              alt="css3 logo"
+              width={32}
+              height={32}
+            />
+            CSS
           </p>
 
           <p>
-          <img src="https://skillicons.dev/icons?i=html" height="32" alt="html5 logo" />
-          HTML
+            <Image
+              src="https://skillicons.dev/icons?i=html"
+              alt="html5 logo"
+              width={32}
+              height={32}
+            />
+            HTML
           </p>
 
           <p>
-          <img src="https://skillicons.dev/icons?i=js" height="32" alt="javascript logo" />
-          Javascript
+            <Image
+              src="https://skillicons.dev/icons?i=js"
+              alt="javascript logo"
+              width={32}
+              height={32}
+            />
+            JavaScript
           </p>
 
           <p>
-          <img src="https://skillicons.dev/icons?i=mysql" height="32" alt="mysql logo" />
-          MySql
+            <Image
+              src="https://skillicons.dev/icons?i=mysql"
+              alt="mysql logo"
+              width={32}
+              height={32}
+            />
+            MySQL
           </p>
 
-          
-          <img src="https://skillicons.dev/icons?i=ts" height="32" alt="typescript logo" />
-          
-
+          <p>
+            <Image
+              src="https://skillicons.dev/icons?i=ts"
+              alt="typescript logo"
+              width={32}
+              height={32}
+            />
+            TypeScript
+          </p>
         </div>
+
       </section>
     </div>
   );
