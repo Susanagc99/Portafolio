@@ -1,8 +1,6 @@
 # Portfolio (Next.js)
 
-## English
-
-This is a personal portfolio built with Next.js (App Router). It contains a Home, Projects and Contact pages. The contact form validates input on the client and stores submissions in MongoDB via an API route.
+### This is a personal portfolio built with Next.js (App Router). It contains a Home, Projects and Contact pages. The contact form validates input on the client and stores submissions in MongoDB via an API route.
 
 Technologies
 
