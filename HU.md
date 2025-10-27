@@ -43,8 +43,8 @@ Construir el formulario con validación cliente/servidor.
 
 > **Criterios de Aceptación:**
 > - [x] **CA_03.1:** Campos obligatorios: fullName, email, message.
-> - [ ] **CA_03.2:** Validación + mensajes de error por campo. (puede usar yup)
-> - [ ] **CA_03.3:** Estado de envío y feedback de éxito/fracaso.
+> - [x] **CA_03.2:** Validación + mensajes de error por campo. (puede usar yup)
+> - [x] **CA_03.3:** Estado de envío y feedback de éxito/fracaso.
 
 **Story Points:** 2
 
@@ -57,9 +57,9 @@ Construir el formulario con validación cliente/servidor.
 Guardar cada envío en la **DB** mediante API Route.
 
 > **Criterios de Aceptación:**
-> - [ ] **CA_04.1**: Modelo ContactMessage con campos: id, fullName, email, message, createdAt.
-> - [ ] **CA_04.2**: Inserción exitosa crea registro en DB.
-> - [ ] **CA_04.3**: Manejo de errores y retorno 2xx/4xx/5xx coherente.
+> - [x] **CA_04.1**: Modelo ContactMessage con campos: id, fullName, email, message, createdAt.
+> - [x] **CA_04.2**: Inserción exitosa crea registro en DB.
+> - [x] **CA_04.3**: Manejo de errores y retorno 2xx/4xx/5xx coherente.
 
 **Story Points:** 2
 
@@ -82,8 +82,8 @@ Escribir cada envío también en una **Google Sheet**
 
 ### Cierre de la actividad.
 
-- [ ] Portafolio Next.js con App Router, **3+ páginas** y **navegación**.
+- [x] Portafolio Next.js con App Router, **3+ páginas** y **navegación**.
 
-- [ ] Formulario **funcional** con **persistencia en DB** y **opcional Google Sheets**.
+- [x] Formulario **funcional** con **persistencia en DB** y **opcional Google Sheets**.
 
-- [ ] Proyecto **documentado** y **entregable** según requerimientos del entrenamiento. (Basado en la estructura y cierre de tu HU de ejemplo, adaptado al contexto Next.
+- [x] Proyecto **documentado** y **entregable** según requerimientos del entrenamiento. (Basado en la estructura y cierre de tu HU de ejemplo, adaptado al contexto Next.
